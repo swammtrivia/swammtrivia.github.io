@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+  <main role="main">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>S.W.A.M.M.</title>
+    <link rel="stylesheet" href="SWAMM.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type = "text/javascript" src = "SWAMM.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class = "container">
+        <h1 id = "SWAMM_Header"> S.W.A.M.M. </h1>
+
+      <div class = "row">
+        <div class = "col-sm-12">
+          <p id = "Sports"><span class="first-letter">S</span>ports &emsp; Who won Super LXV?</p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-6">
+          <input style="margin-bottom: 10px" id="Sports_Answer" type="text"></input>
+          <button id = "Sports_Button" class="rounded" type="submit" onclick='javascript:sportsAnswer();'>Sports</button>
+          <p id = 'sports_correct'></p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-12">
+          <p id = "World"><span class="first-letter">W</span>orld &emsp; What country is west of Argentina?</p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-6">
+          <input style="margin-bottom: 10px" id="World_Answer" type="text"></input>
+          <button id = "World_Button" class="rounded" type="submit" onclick='javascript:worldAnswer();'>World</button>
+          <p id = 'world_correct'></p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-12">
+          <p id = "Anything"><span class="first-letter">A</span>nything &emsp; What dip heavily uses chickpeas?</p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-6">
+          <input style="margin-bottom: 10px" id="Anything_Answer" type="text"></input>
+          <button id = "Anything_Button" class="rounded" type="submit" onclick='javascript:anythingAnswer();'>Anything</button>
+          <p id = 'anything_correct'></p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-12">
+          <p id = "Music"><span class="first-letter">M</span>usic &emsp; Who wrote the song "Smells like Teen Spirit"?</p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-6">
+          <input style="margin-bottom: 10px" id="Music_Answer" type="text"></input>
+          <button id = "Music_Button" class="rounded" type="submit" onclick='javascript:musicAnswer();'>Music</button>
+          <p id = "music_correct"></p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-12">
+          <p id = "Movies"><span class="first-letter">M</span>ovies &emsp; What super hero did Ryan Reynolds play in 2011?</p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-6">
+          <input style="margin-bottom: 10px" id="Movies_Answer" type="text"></input>
+          <button id = "Movies_Button" class="rounded" type="submit" onclick='javascript:moviesAnswer();'>Movies</button>
+          <p id = 'movies_correct'></p>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-6">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick = 'javascript:popup();'>See Results</button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">See Results</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p id = "popup_body"></p>
+                  <a id = textMessage href="sms:+&body=I%20didn%27t%20finish%20S.W.A.M.M.%20today">Text</a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+  <script type = "text/javascript" src = "SWAMM.js"></script>
+</body>
+</html>

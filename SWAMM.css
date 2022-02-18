@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: lightblue !important;
+}
+
+.first-letter {
+  line-height: 70px;
+  font-family: 'Caveat', cursive;
+  font-size: 70px;
+}
+
+#SWAMM_Header {
+  font-family: 'Caveat', cursive;
+  font-size: 96px;
+  text-align: center;
+}
+
+#Sports {
+  text-align: justify;
+  font: 24px Arial, sans-serif;
+}
+
+#World {
+  text-align: justify;
+  font: 24px Arial, sans-serif;
+}
+
+#Anything {
+  text-align: justify;
+  font: 24px Arial, sans-serif;
+}
+
+#Music {
+  text-align: justify;
+  font: 24px Arial, sans-serif;
+}
+
+
+#Movies {
+  text-align: justify;
+  font: 24px Arial, sans-serif;
+}
