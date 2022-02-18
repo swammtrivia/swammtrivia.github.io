@@ -62,7 +62,7 @@
  {
   "Date": "02\/18\/2022",
   "Category": "Sports",
-  "Question": "What country has the most World Cup Titles in Men's Soccer",
+  "Question": "What country has the most World Cup Titles in Men's Soccer?",
   "Answer": "Brazil"
  },
  {
@@ -80,8 +80,8 @@
  {
   "Date": null,
   "Category": "Music",
-  "Question": "The Beatles and Taylor Swift both replaced themselves at No. 1 on Hot 100.  Who else did this?",
-  "Answer": "Drake"
+  "Question": "What is Taylor Swift's highest selling ablum?",
+  "Answer": "Fearless"
  },
  {
   "Date": null,
