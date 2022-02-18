@@ -7,6 +7,13 @@ let answered = 0;
 let answeredCorrectly = 0;
 let answerArray = [0, 0, 0, 0, 0];
 
+const d = new Date();
+let sportsIndex = 17 - d.getDate();
+let worldIndex = 17 - d.getDate() + 1;
+let anythingIndex = 17 - d.getDate() + 2;
+let musicIndex = 17 - d.getDate() + 3;
+let moviesIndex = 17 - d.getDate() + 4;
+
 let url = "https://raw.githubusercontent.com/swammtrivia/swammtrivia.github.io/main/FebruaryQuestions.json";
 
 // Load JSON text from server hosted file and return JSON parsed object
@@ -41,24 +48,22 @@ function loadTextFileAjaxSync(filePath, mimeType)
 var obj = loadJSON(url);
 
 window.onload = function ()  {
-  document.getElementById("Sports").innerHTML = "<span class=\"first-letter\">S</span>ports &emsp;" + obj[0]['Question'];
-  document.getElementById("World").innerHTML = "<span class=\"first-letter\">W</span>orld &emsp;" + obj[1]['Question'];
-  document.getElementById("Anything").innerHTML = "<span class=\"first-letter\">A</span>nything &emsp;" + obj[2]['Question'];
-  document.getElementById("Music").innerHTML = "<span class=\"first-letter\">M</span>usic &emsp;" + obj[3]['Question'];
-  document.getElementById("Movies").innerHTML = "<span class=\"first-letter\">M</span>ovies &emsp;" + obj[4]['Question'];
+  document.getElementById("Sports").innerHTML = "<span class=\"first-letter\">S</span>ports &emsp;" + obj[sportsIndex]['Question'];
+  document.getElementById("World").innerHTML = "<span class=\"first-letter\">W</span>orld &emsp;" + obj[worldIndex]['Question'];
+  document.getElementById("Anything").innerHTML = "<span class=\"first-letter\">A</span>nything &emsp;" + obj[anythingIndex]['Question'];
+  document.getElementById("Music").innerHTML = "<span class=\"first-letter\">M</span>usic &emsp;" + obj[musicIndex]['Question'];
+  document.getElementById("Movies").innerHTML = "<span class=\"first-letter\">M</span>ovies &emsp;" + obj[moviesIndex]['Question'];
 }
 
 
 
 
-const d = new Date();
-// console.log(d.getDate());
 
 function sportsAnswer() {
   if(!sportsClicked) {
     answered += 1;
     let sports = document.getElementById("Sports_Answer").value;
-    if(sports === obj[0]['Answer']) {
+    if(sports.toLowerCase() === obj[sportsIndex]['Answer'].toLowerCase()) {
       // document.getElementById("Sports_Button").style.background = 'Green';
       document.getElementById("Sports_Button").style.background = 'green';
       document.getElementById("Sports_Answer").style.background = 'green';
@@ -81,7 +86,7 @@ function worldAnswer() {
   if(!worldClicked) {
     answered += 1;
     let world = document.getElementById("World_Answer").value;
-    if(world === obj[1]['Answer']) {
+    if(world.toLowerCase() === obj[worldIndex]['Answer'].toLowerCase()) {
       document.getElementById("World_Button").style.background = 'green';
       document.getElementById("World_Answer").style.background = 'green';
       answeredCorrectly += 1;
@@ -103,7 +108,7 @@ function anythingAnswer() {
   if(!anythingClicked) {
     answered += 1;
     let anything = document.getElementById("Anything_Answer").value;
-    if(anything === obj[2]['Answer']) {
+    if(anything.toLowerCase() === obj[anythingIndex]['Answer'].toLowerCase()) {
       document.getElementById("Anything_Button").style.background = 'green';
       document.getElementById("Anything_Answer").style.background = 'green';
       answeredCorrectly += 1;
@@ -125,7 +130,7 @@ function musicAnswer() {
   if(!musicClicked) {
     answered += 1;
     let music = document.getElementById("Music_Answer").value;
-    if(music === obj[3]['Answer']) {
+    if(music.toLowerCase() === obj[musicIndex]['Answer'].toLowerCase()) {
       document.getElementById("Music_Button").style.background = 'green';
       document.getElementById("Music_Answer").style.background = 'green';
       answeredCorrectly += 1;
@@ -147,7 +152,7 @@ function moviesAnswer() {
   if(!moviesClicked) {
     answered += 1;
     let movie = document.getElementById("Movies_Answer").value;
-    if(movie === obj[4]['Answer']) {
+    if(movie.toLowerCase() === obj[moviesIndex]['Answer'].toLowerCase()) {
       document.getElementById("Movies_Button").style.background = 'green';
       document.getElementById("Movies_Answer").style.background = 'green';
       answeredCorrectly += 1;
@@ -167,11 +172,11 @@ function moviesAnswer() {
 
 function popup() {
   if(answered == 5){
-    document.getElementById('sports_correct').innerHTML = obj[0]['Answer'];
-    document.getElementById('world_correct').innerHTML = obj[1]['Answer'];
-    document.getElementById('anything_correct').innerHTML = obj[2]['Answer'];
-    document.getElementById('music_correct').innerHTML = obj[3]['Answer'];
-    document.getElementById('movies_correct').innerHTML = obj[4]['Answer'];
+    document.getElementById('sports_correct').innerHTML = obj[sportsIndex]['Answer'];
+    document.getElementById('world_correct').innerHTML = obj[worldIndex]['Answer'];
+    document.getElementById('anything_correct').innerHTML = obj[anythingIndex]['Answer'];
+    document.getElementById('music_correct').innerHTML = obj[musicIndex]['Answer'];
+    document.getElementById('movies_correct').innerHTML = obj[moviesIndex]['Answer'];
     let textArea = document.getElementById("popup_body");
     textArea.innerHTML = "You got a " + answeredCorrectly + "/" + answered + "! Share with your friends below";
     document.getElementById("textMessage").href = "sms:+&body=My%20S.W.A.M.M.%20score%20today%20was%20" + answeredCorrectly + "/" + answered + textMessageDecoder();
