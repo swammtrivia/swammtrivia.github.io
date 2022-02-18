@@ -8,11 +8,12 @@ let answeredCorrectly = 0;
 let answerArray = [0, 0, 0, 0, 0];
 
 const d = new Date();
-let sportsIndex = 5;
-let worldIndex = 6;
-let anythingIndex = 7;
-let musicIndex = 8;
-let moviesIndex = 9;
+// 5 * (d.getDate() - 18) + x
+let sportsIndex = 5 * (d.getDate() - 17) + 0;
+let worldIndex = 5 * (d.getDate() - 17) + 1;
+let anythingIndex = 5 * (d.getDate() - 17) + 2;
+let musicIndex = 5 * (d.getDate() - 17) + 3;
+let moviesIndex = 5 * (d.getDate() - 17) + 4;
 
 let url = "https://raw.githubusercontent.com/swammtrivia/swammtrivia.github.io/main/FebruaryQuestions.json";
 
@@ -76,6 +77,7 @@ function sportsAnswer() {
     }
     document.getElementById("Sports_Answer").readOnly = true;
     sportsClicked = true;
+    document.getElementById('sports_correct').innerHTML = obj[sportsIndex]['Answer'];
   }
   else{
     return;
@@ -98,6 +100,7 @@ function worldAnswer() {
     }
     document.getElementById("World_Answer").readOnly = true;
     worldClicked = true;
+    document.getElementById('world_correct').innerHTML = obj[worldIndex]['Answer'];
   }
   else{
     return;
@@ -120,6 +123,7 @@ function anythingAnswer() {
     }
     document.getElementById("Anything_Answer").readOnly = true;
     anythingClicked = true;
+    document.getElementById('anything_correct').innerHTML = obj[anythingIndex]['Answer'];
   }
   else {
     return;
@@ -142,6 +146,7 @@ function musicAnswer() {
     }
     document.getElementById("Music_Answer").readOnly = true;
     musicClicked = true;
+    document.getElementById('music_correct').innerHTML = obj[musicIndex]['Answer'];
   }
   else{
     return;
@@ -164,6 +169,7 @@ function moviesAnswer() {
     }
     document.getElementById("Movies_Answer").readOnly = true;
     moviesClicked = true;
+    document.getElementById('movies_correct').innerHTML = obj[moviesIndex]['Answer'];
   }
   else{
     return;
@@ -172,11 +178,6 @@ function moviesAnswer() {
 
 function popup() {
   if(answered == 5){
-    document.getElementById('sports_correct').innerHTML = obj[sportsIndex]['Answer'];
-    document.getElementById('world_correct').innerHTML = obj[worldIndex]['Answer'];
-    document.getElementById('anything_correct').innerHTML = obj[anythingIndex]['Answer'];
-    document.getElementById('music_correct').innerHTML = obj[musicIndex]['Answer'];
-    document.getElementById('movies_correct').innerHTML = obj[moviesIndex]['Answer'];
     let textArea = document.getElementById("popup_body");
     textArea.innerHTML = "You got a " + answeredCorrectly + "/" + answered + "! Share with your friends below";
     document.getElementById("textMessage").href = "sms:+&body=My%20S.W.A.M.M.%20score%20today%20was%20" + answeredCorrectly + "/" + answered + textMessageDecoder();
