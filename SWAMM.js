@@ -8,11 +8,11 @@ let answeredCorrectly = 0;
 let answerArray = [0, 0, 0, 0, 0];
 
 const d = new Date();
-let sportsIndex = 17 - d.getDate();
-let worldIndex = 17 - d.getDate() + 1;
-let anythingIndex = 17 - d.getDate() + 2;
-let musicIndex = 17 - d.getDate() + 3;
-let moviesIndex = 17 - d.getDate() + 4;
+let sportsIndex = 5;
+let worldIndex = 6;
+let anythingIndex = 7;
+let musicIndex = 8;
+let moviesIndex = 9;
 
 let url = "https://raw.githubusercontent.com/swammtrivia/swammtrivia.github.io/main/FebruaryQuestions.json";
 
