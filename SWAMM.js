@@ -177,17 +177,17 @@ function moviesAnswer() {
 }
 
 function popup() {
+  // let hrefText = document.href('textMessage').innerHTML;
   if(answered == 5){
-    let textArea = document.getElementById("popup_body");
-    textArea.innerHTML = "You got a " + answeredCorrectly + "/" + answered + "! Share with your friends below";
-    document.getElementById("textMessage").href = "sms:+&body=My%20S.W.A.M.M.%20score%20today%20was%20" + answeredCorrectly + "/" + answered + textMessageDecoder();
+    console.log("here");
+    document.getElementById('textMessage').href = "sms:+&body=My%20S.W.A.M.M.%20score%20today%20was%20" + answeredCorrectly + "/" + answered + textMessageDecoder() + "%0Acheck%20us%20out%20at%20swammtrivia.github.io";
     // green check is %E2%9C%85%20, red x is %E2%9D%8C%20
   }
   else {
-    let textArea = document.getElementById("popup_body");
-    textArea.innerHTML = "You didn't finish the questions, go back and take some guesses!";
+    document.getElementById('textMessage').href = "sms:+&body=I%20didn%27t%20finish%20S.W.A.M.M.%20today";
   }
 }
+
 
 function textMessageDecoder() {
   let message = "%20";
