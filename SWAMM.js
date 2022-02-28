@@ -64,7 +64,7 @@ function sportsAnswer() {
   if(!sportsClicked) {
     answered += 1;
     let sports = document.getElementById("Sports_Answer").value;
-    if(sports.toLowerCase() === obj[sportsIndex]['Answer'].toLowerCase()) {
+    if(sports.toLowerCase().trim() === obj[sportsIndex]['Answer'].toLowerCase()) {
       // document.getElementById("Sports_Button").style.background = 'Green';
       document.getElementById("Sports_Button").style.background = 'green';
       document.getElementById("Sports_Answer").style.background = 'green';
@@ -88,7 +88,7 @@ function worldAnswer() {
   if(!worldClicked) {
     answered += 1;
     let world = document.getElementById("World_Answer").value;
-    if(world.toLowerCase() === obj[worldIndex]['Answer'].toLowerCase()) {
+    if(world.toLowerCase().trim() === obj[worldIndex]['Answer'].toLowerCase()) {
       document.getElementById("World_Button").style.background = 'green';
       document.getElementById("World_Answer").style.background = 'green';
       answeredCorrectly += 1;
@@ -111,7 +111,7 @@ function anythingAnswer() {
   if(!anythingClicked) {
     answered += 1;
     let anything = document.getElementById("Anything_Answer").value;
-    if(anything.toLowerCase() === obj[anythingIndex]['Answer'].toLowerCase()) {
+    if(anything.toLowerCase().trim() === obj[anythingIndex]['Answer'].toLowerCase()) {
       document.getElementById("Anything_Button").style.background = 'green';
       document.getElementById("Anything_Answer").style.background = 'green';
       answeredCorrectly += 1;
@@ -134,7 +134,7 @@ function musicAnswer() {
   if(!musicClicked) {
     answered += 1;
     let music = document.getElementById("Music_Answer").value;
-    if(music.toLowerCase() === obj[musicIndex]['Answer'].toLowerCase()) {
+    if(music.toLowerCase().trim() === obj[musicIndex]['Answer'].toLowerCase()) {
       document.getElementById("Music_Button").style.background = 'green';
       document.getElementById("Music_Answer").style.background = 'green';
       answeredCorrectly += 1;
@@ -157,7 +157,7 @@ function moviesAnswer() {
   if(!moviesClicked) {
     answered += 1;
     let movie = document.getElementById("Movies_Answer").value;
-    if(movie.toLowerCase() === obj[moviesIndex]['Answer'].toLowerCase()) {
+    if(movie.toLowerCase().trim() === obj[moviesIndex]['Answer'].toLowerCase()) {
       document.getElementById("Movies_Button").style.background = 'green';
       document.getElementById("Movies_Answer").style.background = 'green';
       answeredCorrectly += 1;
