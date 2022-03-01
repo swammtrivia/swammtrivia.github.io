@@ -7,15 +7,17 @@ let answered = 0;
 let answeredCorrectly = 0;
 let answerArray = [0, 0, 0, 0, 0];
 
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const d = new Date();
+console.log(d.getDate());
 // 5 * (d.getDate() - 18) + x
-let sportsIndex = 5 * (d.getDate() - 17) + 0;
-let worldIndex = 5 * (d.getDate() - 17) + 1;
-let anythingIndex = 5 * (d.getDate() - 17) + 2;
-let musicIndex = 5 * (d.getDate() - 17) + 3;
-let moviesIndex = 5 * (d.getDate() - 17) + 4;
+let sportsIndex = 5 * (d.getDate() - 1) + 0;
+let worldIndex = 5 * (d.getDate() - 1) + 1;
+let anythingIndex = 5 * (d.getDate() - 1) + 2;
+let musicIndex = 5 * (d.getDate() - 1) + 3;
+let moviesIndex = 5 * (d.getDate() - 1) + 4;
 
-let url = "https://raw.githubusercontent.com/swammtrivia/swammtrivia.github.io/main/FebruaryQuestions.json";
+let url = "https://raw.githubusercontent.com/swammtrivia/swammtrivia.github.io/main/" + month[d.getMonth()] + "Questions.json";
 
 // Load JSON text from server hosted file and return JSON parsed object
 function loadJSON(filePath) {
