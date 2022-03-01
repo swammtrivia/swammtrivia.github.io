@@ -11,11 +11,11 @@ const month = ["January","February","March","April","May","June","July","August"
 const d = new Date();
 console.log(d.getDate());
 // 5 * (d.getDate() - 18) + x
-let sportsIndex = 5 * (d.getDate() - 1) + 0;
-let worldIndex = 5 * (d.getDate() - 1) + 1;
-let anythingIndex = 5 * (d.getDate() - 1) + 2;
-let musicIndex = 5 * (d.getDate() - 1) + 3;
-let moviesIndex = 5 * (d.getDate() - 1) + 4;
+let sportsIndex = 5 * (d.getDate()) + 0;
+let worldIndex = 5 * (d.getDate()) + 1;
+let anythingIndex = 5 * (d.getDate()) + 2;
+let musicIndex = 5 * (d.getDate()) + 3;
+let moviesIndex = 5 * (d.getDate()) + 4;
 
 let url = "https://raw.githubusercontent.com/swammtrivia/swammtrivia.github.io/main/" + month[d.getMonth()] + "Questions.json";
 
