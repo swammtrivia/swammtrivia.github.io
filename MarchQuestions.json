@@ -387,36 +387,36 @@
  {
   "Date": 11,
   "Category": "Sports",
-  "Question": null,
-  "Answer": null,
+  "Question": "What country is reigning NBA MVP Nikola Jokic from?",
+  "Answer": "Serbia",
   "Column5": null
  },
  {
   "Date": null,
   "Category": "World",
-  "Question": null,
-  "Answer": null,
+  "Question": "What is the biggest city in South America with over 13 Million People? (World Population Review)",
+  "Answer": "Buenos Aires",
   "Column5": null
  },
  {
   "Date": null,
   "Category": "Anything",
-  "Question": null,
-  "Answer": null,
+  "Question": "How many Apollo Missions succesfully went to the moon? (Please put integer value, ex. put 1 instead of one)",
+  "Answer": "6",
   "Column5": null
  },
  {
   "Date": null,
   "Category": "Music",
-  "Question": null,
-  "Answer": null,
+  "Question": "What \"Zac Brown Band\" has the most streams?",
+  "Answer": "Chicken Fried",
   "Column5": null
  },
  {
   "Date": null,
   "Category": "Movies",
-  "Question": null,
-  "Answer": null,
+  "Question": "Who just got recently cast to star in the remake of \"White Men Can't Jump\"?",
+  "Answer": "Jack Harlow",
   "Column5": null
  },
  {
