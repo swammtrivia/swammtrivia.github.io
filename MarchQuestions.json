@@ -457,15 +457,15 @@
  {
   "Date": 13,
   "Category": "Sports",
-  "Question": "Which US national just received a $24 million settlement for equal pay?",
-  "Answer": "Soccer",
+  "Question": "What year did Anthony Davis lead Kentucky to a championship?",
+  "Answer": "2012",
   "Column5": "Can you help me phrase this"
  },
  {
   "Date": null,
   "Category": "World",
-  "Question": null,
-  "Answer": null,
+  "Question": "What's the capital of the Dominican Republic?",
+  "Answer": "Santo Domingo",
   "Column5": null
  },
  {
@@ -478,8 +478,8 @@
  {
   "Date": null,
   "Category": "Music",
-  "Question": null,
-  "Answer": null,
+  "Question": "What band wrote the famous song \"Basket Case\"?",
+  "Answer": "Green Day",
   "Column5": null
  },
  {
